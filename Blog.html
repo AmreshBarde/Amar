@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="#">Blog</a></button>
+    <button><a href="#">All post</a></button>
+
+    <div class="container">
+        <label for="">Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name">
+        <label for="">Email</label>
+        <input type="email" placeholder="Enter Your Email" id="email">
+        <label for="">Contact</label>
+        <input type="text" placeholder="Enter Your Contact Number" id="number">
+        <label for="">City</label>
+        <input type="text" placeholder="Enter Your City">
+        <button onclick="submit()">submit</button>
+    </div>
+
+    <script>
+        function submit(){
+            const name = document.getElementById('name')
+            const email = document.getElementById('email')
+            const contact = document.getElementById('contact')
+            const city = document.getElementById('city')
+
+            const obj = {
+                Dname : name,
+                Demail : email,
+                Dcontact : contact,
+                Dcity : city,
+            }
+            // JSON.parse()
+            console.log(obj)
+            submit.push(obj)
+            localStorage.setItem('data',JSON.stringify(submit))
+
+        }
+    </script>
+</body>
+</html>
